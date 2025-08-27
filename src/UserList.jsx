@@ -1,10 +1,11 @@
 import UserCard from "./UserCard";
 
-function UserList() {
+function UserList({users, handleDeleteUser}) {
+
     return (
         <div>
-            {User.map(User =>(
-                <UserCard user={user} key={user.id} />
+            {users.map(user =>(
+                <UserCard user={user} key={user.id} onDelete={handleDeleteUser}  />
             ))}
         </div>
     );
